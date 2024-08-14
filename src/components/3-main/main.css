@@ -1,0 +1,81 @@
+/* 
+=================================
+=== style component main  =======
+=================================
+=== 1) main 
+=== 2) responsive using (media)
+==================================
+
+*/
+
+/* 
+=====================
+=== 1) main   =======
+=====================
+*/
+
+main{
+ min-height: 60vh;
+}
+main h1{
+ color: var(--red);
+ text-align: center;
+ font-size: 6em;
+}
+main .cards{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em;
+    flex-wrap: wrap;
+}
+main div.card{
+  background-color:#333;
+  width: 22%;
+  height: 25vh;
+  padding: .5em;
+  border: 2px solid transparent;
+  border-radius: .4em;
+  text-align: center;
+}
+main div.card:hover{
+   border: 2px solid var(--red);
+  }
+main div.card img{
+    height: 30%;
+    width: 30%;  
+}
+main div.card h2{
+    margin: 1em;
+}
+/* 
+===================================
+=== 2) responsive using (media) ===
+===================================
+*/
+@media (min-width:1000px) {
+   main{
+    padding: 6em;
+   }
+}
+@media (min-width:600px) and (max-width:1117px) {
+    main div.card{
+        padding: 0%;
+       width: 48%;
+       margin: .5em;
+      }
+}
+@media (max-width:600px)  {
+    main div.card{
+       width: 90%;
+       margin: .5em;
+      }
+      main h1{
+        font-size: 3em;
+       }
+}
+@media (min-width:1117px) and (max-width:1400px) {
+    main div.card{
+        width: 30%;
+        margin: .5em;
+       }
+ }

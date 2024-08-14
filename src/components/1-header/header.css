@@ -1,0 +1,194 @@
+/* 
+===================================
+=== style component header  =======
+===================================
+=== 1) header 
+=== 2) menu
+=== 3) section one 
+=== 4) responsive using (media)
+==================================
+
+*/
+
+
+
+/* 
+======================
+=== 1) header  =======
+======================
+*/
+.header{
+    background-image: url(../../images/banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+.header header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 4em;
+    height: 10%;
+}
+.header nav ul{
+    list-style-type: none;
+    display: flex;
+    
+}
+.header nav ul li{
+   margin: 0em 1em;   
+}
+.header nav ul li a{
+    color: var(--colorTitle);
+    font-weight: bold;
+ }
+.header nav ul li a:hover,
+div.menu ul li a:hover{
+    color:rgb(0, 162, 255);
+ }
+ .header button.btnmenu{
+    all: unset;
+    display: none;
+    position: absolute;
+    right: 2em;
+    font-size: 2.1em;
+ }
+/* 
+======================
+=== 2) menu    =======
+======================
+*/
+ div.container_menu{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+    /* backdrop-filter: ; */
+ }
+ div.menu{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: auto;
+    background-color:#333;
+    color: white;
+    z-index: 99999999999999999999;
+    border-bottom: 1px solid white;
+    animation: showMenu .5s linear;
+}
+@keyframes showMenu {
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+div.menu ul{
+    list-style-type: none;
+}
+div.menu ul li:first-child{
+   text-align: end;
+   padding-right: 2em;
+   padding-top: 2em;
+   border: none;
+}
+div.menu ul li:first-child:hover{
+    border: none;
+}
+div.menu ul li:first-child button{
+   all: unset;
+   font-size: 1.5em;
+   
+ }
+div.menu ul li{
+   padding: 1em;
+   border: 2px solid transparent;
+}
+div.menu ul li:hover{
+    border: 2px solid var(--red);
+}
+
+div.menu ul li a{
+    width: 100%;
+    height: 100%;
+   
+}
+
+/* 
+======================
+=== 3) section one ===
+======================
+*/
+.header section {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+.header section div{
+    width: 47%;
+    text-align: center;
+}
+.header section div h1{
+    font-size: 4em;
+
+}
+
+.header section div span{
+    color:var(--red);
+}
+
+.header section div button.btn{
+    all: unset;
+    margin-top: 1em;
+    border: 1px solid var(--border);
+    font-size: 1.4em;
+    padding: .5em 2.3em;
+    border-radius: .5em;
+    background-color: var(--red);
+    letter-spacing: .1em;
+    cursor: pointer;
+    border: 2px solid red;
+}
+
+.header section div button.btn:hover{
+    background: white;
+    color: var(--red);
+    border: 2px solid red;
+}
+/* 
+====================================
+=== 4) responsive using (media)=====
+====================================
+*/
+@media (max-width:600px)  {
+    .header section div{
+        width: 100%;
+    }
+    .header section div h1{
+        font-size: 3em;
+    
+    }
+    .header section div p{
+        font-size: .7em;
+    }
+    .header section div button.btn{  
+        font-size: 1em;
+    }
+}
+
+
+@media (max-width:600px) {
+   .header nav{
+    display: none;
+   }
+   .header button.btnmenu{
+    display: block;
+   }
+}

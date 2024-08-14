@@ -1,0 +1,24 @@
+:root{
+  --colorTitle:white;
+  --colorSubTitle:rgba(255, 255, 255, 0.733);
+  --bg:black;
+  --bgNav:#0f0f0fd5;
+  --border:rgba(255, 255, 255, 0.733) ;
+  --bgBtn:rgba(245, 141, 4, 0.863);
+  --red:rgb(255, 30, 0);
+}
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: var(--colorSubTitle);
+}
+.App{
+  background-color:var(--bg);
+  color:var(--colorTitle);
+  min-height: 100vh;
+  width: 100%;
+}

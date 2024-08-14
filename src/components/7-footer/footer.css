@@ -1,0 +1,82 @@
+/* 
+=================================
+=== style component footer  =====
+=================================
+=== 1) footer 
+=== 2) responsive using (media)
+==================================
+
+*/
+
+/* 
+=====================
+=== 1) footer   ======
+=====================
+*/
+footer{
+    padding: 2em 6em ;
+    min-height: 35vh;
+    display: flex;
+    background-color: #333;
+    flex-wrap: wrap;
+}
+footer ul{
+    list-style-type: none;
+    padding:.3em 0em;
+}
+footer ul li {
+   margin: .2em;
+   text-decoration: underline;
+   color: #d1c8c8;
+}
+footer div{
+    margin: 1em;
+}
+footer div.sections ul li a:hover{
+    color:rgb(0, 162, 255);
+    
+}
+footer div.media ul{
+    display: flex;
+}
+footer div.media ul li{
+  font-size: 1.2em;
+  transition: .3s;
+}
+footer div.media ul li a:hover{
+   color: white;
+   font-size: 1.3em;
+}
+div.copyright{
+    text-align: center;
+    font-size: .8em;
+    color: #d1c8c8;
+    padding: 1em;
+    background-color: red;
+}
+/* 
+=================================
+=== 2) responsive using (media) =
+=================================
+*/
+@media (min-width:600px) and (max-width:1117px) {
+    footer{
+        padding: 2em ;
+    }
+    footer div{
+        padding: 0%;
+        width: 48%;
+       margin: .5em;
+      }
+}
+@media (max-width:600px) {
+    footer {
+        flex-direction: column;
+    }
+    footer div{
+        border-bottom: 1px solid #d1c8c8;
+    }
+    footer div.media ul li a:hover{
+        font-size: 1em;
+     }
+}

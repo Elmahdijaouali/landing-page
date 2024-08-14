@@ -1,0 +1,130 @@
+/* 
+=================================
+=== style component join  =======
+=================================
+=== 1) join 
+=== 2) responsive using (media)
+==================================
+
+*/
+
+/* 
+=====================
+=== 1) join   =======
+=====================
+*/
+div.containerJoin{
+    width: 100% !important;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+}
+@keyframes animationJoin  {
+    0%{
+       scale: 0;
+    }
+    60%{
+       scale: 1.3;
+    }
+    100%{
+        scale: 1;
+    }
+}
+div.join{
+   padding: 2em;
+   border: 1px solid white;
+   position: fixed;
+   top: 30vh;
+   z-index: 999999999;
+   background-color: #333;
+   text-align: start !important;
+   animation: animationJoin .8s linear;
+   
+}
+div.join form  h2{
+    text-align: center;
+    color: var(--red);
+    font-size: 2em;
+    letter-spacing: .2em;
+}
+div.join form div{
+   margin: .5em;
+}
+div.join form div label,
+div.join form div input{
+    text-align: start !important;
+}
+div.join form div input{
+   all: unset;
+   background-color: white;
+   border-radius: .1em;
+   font-size: 1.2em;
+   padding: .1em .5em;
+  color: #333;
+}
+div.join  button{
+    all: unset;
+    font-size: 1.4em;
+}
+div.join  button:hover{
+    cursor: pointer;
+}
+div.join form button.submit{
+    all: unset;
+    margin-top: 1em;
+    margin-left: .5em;
+    border: 1px solid var(--border);
+    font-size: 1.1em;
+    padding: .5em 1.2em;
+    border-radius: .5em;
+    background-color:rgb(0, 180, 0);
+    letter-spacing: .1em;
+   
+}
+div.join form button.submit:hover{
+    cursor: pointer;
+}
+/* 
+=================================
+=== 2) responsive using (media)==
+=================================
+*/
+@media (max-width:1181px){
+    div.join{
+        width: 100% !important;
+      
+  }
+}
+
+@media (min-width:894px) {
+    div.containerJoin{
+        display: flex;
+        justify-content: center;
+    }
+    div.join{
+          width: 60% !important;
+          height: auto ;
+          padding:  5em;
+        
+    }
+    div.join form div{
+       display: flex;
+       flex-direction: column;
+       margin: auto;
+    }
+    
+}
+@media (max-width:894px) {
+    div.join{
+          width: 100% ;
+         height: auto ;
+    }
+    div.join form div{
+       display: flex;
+       flex-direction: column;
+    }
+}
+
+

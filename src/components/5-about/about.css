@@ -1,0 +1,136 @@
+/* 
+=================================
+=== style component about  ======
+=================================
+=== 1) about 
+=== 2) left section
+=== 3) right section 
+=== 4) responsive using (media)
+==================================
+
+*/
+
+/* 
+=====================
+=== 1) about   ======
+=====================
+*/
+.about{
+    display: flex;
+    width: 100%;
+    min-height: 60vh;
+    flex-wrap: wrap;
+}
+/* 
+========================
+=== 2) left section  ===
+========================
+*/
+.about div.section-left{
+    width: 50%;
+}
+.about div.section-left img{
+  width: 100%;
+  height: 100%;
+  
+}
+/* 
+========================
+=== 3) right section ===
+========================
+*/
+.about div.section-right{
+  padding: 2em;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about div.section-right p{
+    padding-top: 1em;
+}
+.about div.section-right h1{
+    color: var(--red);
+    font-size: 3em;
+}
+.about div.section-right button{
+    all: unset;
+    text-align: center;
+    width: 30%;
+    border: 1px solid var(--border);
+    font-size: 1.2em;
+    padding: .4em ;
+    border-radius: .5em;
+    background-color: var(--red);
+    margin-top: 1em;
+    border: 2px solid red;
+}
+.about div.section-right button:hover{
+    color: var(--red);
+    background: white;
+    border: 2px solid red;
+}
+div.learn_more{
+  animation: learn_more 2s linear;
+}
+div.learn_more ul{
+  padding-left: 1.3em;
+}
+@keyframes learn_more {
+  0%{
+     opacity: 0;
+  }
+  50%{
+     opacity: .5;
+  }
+  100%{
+   opacity: 1;
+  }
+}
+/* 
+====================================
+=== 4) responsive using (media)  ===
+====================================
+*/
+
+@media (min-width:1000px) {
+    .about{
+        justify-content: center;
+    }
+    .about div.section-left{
+        width: 40%;
+      }
+      .about div.section-right{
+        width: 30%;
+      }
+}
+@media (min-width:1000px) and (max-width:1511px) {
+    .about div.section-left{
+        width: 48%;
+      }
+      .about div.section-right{
+        width: 48%;
+      }
+}
+@media (min-width:600px) and (max-width:902px)  {
+    .about div.section-left{
+      display: none;
+      }
+      .about div.section-right{
+        width: 100%;
+      }
+}
+@media (max-width:600px)  {
+    .about div.section-left{
+        width: 100%;
+      }
+    .about div.section-right{
+        width: 100%;
+      }
+    .about div.section-right h1{
+        font-size: 2em;
+    }
+    .about div.section-right button{
+        font-size: 1em;
+    }
+}

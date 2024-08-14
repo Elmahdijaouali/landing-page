@@ -1,0 +1,76 @@
+/* 
+=================================
+=== style component offer  ======
+=================================
+=== 1) offer 
+=== 2) responsive using (media)
+==================================
+
+*/
+
+/* 
+=====================
+=== 1) offer   ======
+=====================
+*/
+.offer {
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     color: var(--colorTitle);
+     background-image: url(../../images/offer.png);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+}
+.offer div.content{
+     width: 40%;
+     text-align: center;
+}
+.offer div.content h1 {
+     font-size: 4em;
+     width: 100%;     
+}
+.offer div.content h1 span{
+     color:var(--red);
+}
+.offer button.btnOffer{
+    all: unset;
+    position: absolute;
+    bottom: 4em;
+    border: 1px solid var(--border);
+    font-size: 1.4em;
+    padding: .3em 2em;
+    border-radius: .5em;
+    background-color: var(--red);
+    cursor: pointer;
+    border: 2px solid red;
+}
+.offer button.btnOffer:hover{
+     color: var(--red);
+     background:white;
+     border: 2px solid red;
+}
+/* 
+=================================
+===2) responsive using (media)===
+=================================
+*/
+@media (max-width:600px)  {
+     .offer div.content{
+          width: 100%;
+     }
+     .offer div.content h1 {
+          font-size: 3em;  
+     }
+     .offer div.content p{
+          font-size: .7em;  
+     }
+     .offer button.btnOffer{
+          font-size: 1em;
+      }
+ }
